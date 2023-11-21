@@ -1,12 +1,19 @@
-from flask import Flask, render_template, url_for,redirect
+from flask import Flask, render_template, url_for,redirect, jsonify
 from flask_socketio import SocketIO
+import pymongo
+
+client = pymongo.MongoClient('mongodb://localhost:27017')
+db = client['jornadaAprendizagem']
+colecao = db['cards']
+
 
 app = Flask(__name__)
 socketio = SocketIO(app)
 
 @app.route('/', methods = ['GET'])
 def index():
-    return render_template('index.html')
+    cards_list = list(colecao.find())
+    return render_template('index.html', cards=cards_list)
 
 @app.route('/btn', methods=['GET'])
 def btn():
