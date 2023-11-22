@@ -1,0 +1,21 @@
+{
+    "_id": {
+      "$oid": "655d65c65c59a012d616b184"
+    },
+    "ordemProd": "XXXXXXX",
+    "operador": "João Texeira",
+    "modelo": "ONIX/PN9855342",
+    "processos": [
+      "Corte",
+      "Limpeza",
+      "Moldagem",
+      "Solda",
+      "Descascar",
+      "Lixamento Int.",
+      "Polimento Int.",
+      "Lixamento Ext."
+    ],
+    "processoAtual": "Corte",
+    "indexAtual": 0,
+    "tempoInicio": ""
+  }

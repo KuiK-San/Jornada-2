@@ -6,7 +6,6 @@ client = pymongo.MongoClient('mongodb://localhost:27017')
 db = client['jornadaAprendizagem']
 colecao = db['cards']
 
-
 app = Flask(__name__)
 socketio = SocketIO(app)
 
