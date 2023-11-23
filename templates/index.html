@@ -9,12 +9,12 @@
 <body>
     <div class="p-2" style="background: linear-gradient(180deg, rgba(7, 3, 27, 0.00) 0%, #07031B 72.4%), #15144E; ">
     
-        <div class="vh-100">
+        <div class="vh-100 h-100">
             <div class="row" style="min-height: 334.4px;">
                 <div class="col-3 border border-white border-top-0" id="corte" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 43.23%, #07031B 85.42%); ">
                     <h4 class="text-white text-center pb-2 border-white border-bottom overflow-scroll">Corte</h4>
                     {% for card in cards %}
-                        {% if card.processoAtual == 'Corte' %}
+                        {% if card.indexAtual != -1 and card.processos[card.indexAtual] == 'Corte' %}
                         <div class="card">
                             <div class="card-body p-1">
                                 <h4 class="card-title text-center fw-bold">{{ card.ordemProd }}</h4>
@@ -28,8 +28,8 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="row btn-group-vertical w-100 mx-0 gap-1">
-                                            <button class="btn disabled btn-outline-dark border-2 rounded-bottom-2">Tempo Total<br>123</button>
-                                            <button class="btn disabled btn-outline-dark border-2 rounded-top-2">Tempo Atual<br>123</button>
+                                            <button class="btn disabled btn-outline-dark border-2 rounded-bottom-2">Tempo Total<br>02:25:10</button>
+                                            <button class="btn disabled btn-outline-dark border-2 rounded-top-2">Tempo Atual<br>01:12:03</button>
                                         </div>
                                     </div>
                                 </div>
@@ -42,7 +42,7 @@
                 <div class="col-3 border border-white border-top-0" id="limpeza" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 43.23%, #07031B 85.42%); ">
                     <h4 class="text-white text-center pb-2 border-white border-bottom">Limpeza</h4>
                     {% for card in cards %}
-                        {% if card.processoAtual == 'Limpeza' %}
+                        {% if card.indexAtual != -1 and card.processos[card.indexAtual] == 'Limpeza' %}
                         <div class="card">
                             <div class="card-body p-1">
                                 <h4 class="card-title text-center fw-bold">{{ card.ordemProd }}</h4>
@@ -57,8 +57,8 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="row btn-group-vertical w-100 mx-0 gap-1">
-                                            <button class="btn disabled btn-outline-dark border-2 rounded-bottom-2">Tempo Total<br>123</button>
-                                            <button class="btn disabled btn-outline-dark border-2 rounded-top-2">Tempo Atual<br>123</button>
+                                            <button class="btn disabled btn-outline-dark border-2 rounded-bottom-2">Tempo Total<br>02:25:10</button>
+                                            <button class="btn disabled btn-outline-dark border-2 rounded-top-2">Tempo Atual<br>01:12:03</button>
                                         </div>
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@
                 <div class="col-3 border border-white border-top-0" id="moldagem" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 43.23%, #07031B 85.42%); ">
                     <h4 class="text-white text-center pb-2 border-white border-bottom">Moldagem</h4>
                     {% for card in cards %}
-                        {% if card.processoAtual == 'Moldagem' %}
+                        {% if card.indexAtual != -1 and card.processos[card.indexAtual] == 'Moldagem' %}
                         <div class="card">
                             <div class="card-body p-1">
                                 <h4 class="card-title text-center fw-bold">{{ card.ordemProd }}</h4>
@@ -86,8 +86,8 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="row btn-group-vertical w-100 mx-0 gap-1">
-                                            <button class="btn disabled btn-outline-dark border-2 rounded-bottom-2">Tempo Total<br>123</button>
-                                            <button class="btn disabled btn-outline-dark border-2 rounded-top-2">Tempo Atual<br>123</button>
+                                            <button class="btn disabled btn-outline-dark border-2 rounded-bottom-2">Tempo Total<br>02:25:10</button>
+                                            <button class="btn disabled btn-outline-dark border-2 rounded-top-2">Tempo Atual<br>01:12:03</button>
                                         </div>
                                     </div>
                                 </div>
@@ -100,7 +100,7 @@
                 <div class="col-3 border border-white border-top-0" id="solda" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 43.23%, #07031B 85.42%); ">
                     <h4 class="text-white text-center pb-2 border-white border-bottom">Solda</h4>
                     {% for card in cards %}
-                        {% if card.processoAtual == 'Solda' %}
+                        {% if card.indexAtual != -1 and card.processos[card.indexAtual] == 'Solda' %}
                         <div class="card">
                             <div class="card-body p-1">
                                 <h4 class="card-title text-center fw-bold">{{ card.ordemProd }}</h4>
@@ -115,8 +115,8 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="row btn-group-vertical w-100 mx-0 gap-1">
-                                            <button class="btn disabled btn-outline-dark border-2 rounded-bottom-2">Tempo Total<br>123</button>
-                                            <button class="btn disabled btn-outline-dark border-2 rounded-top-2">Tempo Atual<br>123</button>
+                                            <button class="btn disabled btn-outline-dark border-2 rounded-bottom-2">Tempo Total<br>02:25:10</button>
+                                            <button class="btn disabled btn-outline-dark border-2 rounded-top-2">Tempo Atual<br>01:12:03</button>
                                         </div>
                                     </div>
                                 </div>
@@ -131,7 +131,7 @@
                 <div class="col-3 border border-white border-top-0" id="descascar" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 43.23%, #07031B 85.42%); ">
                     <h4 class="text-white text-center pb-2 border-white border-bottom">Descascar</h4>
                     {% for card in cards %}
-                        {% if card.processoAtual == 'Descascar' %}
+                        {% if card.indexAtual != -1 and card.processos[card.indexAtual] == 'Descascar' %}
                         <div class="card">
                             <div class="card-body p-1">
                                 <h4 class="card-title text-center fw-bold">{{ card.ordemProd }}</h4>
@@ -146,8 +146,8 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="row btn-group-vertical w-100 mx-0 gap-1">
-                                            <button class="btn disabled btn-outline-dark border-2 rounded-bottom-2">Tempo Total<br>123</button>
-                                            <button class="btn disabled btn-outline-dark border-2 rounded-top-2">Tempo Atual<br>123</button>
+                                            <button class="btn disabled btn-outline-dark border-2 rounded-bottom-2">Tempo Total<br>02:25:10</button>
+                                            <button class="btn disabled btn-outline-dark border-2 rounded-top-2">Tempo Atual<br>01:12:03</button>
                                         </div>
                                     </div>
                                 </div>
@@ -160,7 +160,7 @@
                 <div class="col-3 border border-white border-top-0" id="lixInt" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 43.23%, #07031B 85.42%); ">
                     <h4 class="text-white text-center pb-2 border-white border-bottom">Lixamento Interno</h4>
                     {% for card in cards %}
-                        {% if card.processoAtual == 'Lixamento Int.' %}
+                        {% if card.indexAtual != -1 and card.processos[card.indexAtual] == 'Lixamento Int.' %}
                         <div class="card">
                             <div class="card-body p-1">
                                 <h4 class="card-title text-center fw-bold">{{ card.ordemProd }}</h4>
@@ -175,8 +175,8 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="row btn-group-vertical w-100 mx-0 gap-1">
-                                            <button class="btn disabled btn-outline-dark border-2 rounded-bottom-2">Tempo Total<br>123</button>
-                                            <button class="btn disabled btn-outline-dark border-2 rounded-top-2">Tempo Atual<br>123</button>
+                                            <button class="btn disabled btn-outline-dark border-2 rounded-bottom-2">Tempo Total<br>02:25:10</button>
+                                            <button class="btn disabled btn-outline-dark border-2 rounded-top-2">Tempo Atual<br>01:12:03</button>
                                         </div>
                                     </div>
                                 </div>
@@ -189,7 +189,7 @@
                 <div class="col-3 border border-white border-top-0" id="polInt" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 43.23%, #07031B 85.42%); ">
                     <h4 class="text-white text-center pb-2 border-white border-bottom">Polimento Interno</h4>
                     {% for card in cards %}
-                        {% if card.processoAtual == 'Polimento Int.' %}
+                        {% if card.indexAtual != -1 and card.processos[card.indexAtual] == 'Polimento Int.' %}
                         <div class="card">
                             <div class="card-body p-1">
                                 <h4 class="card-title text-center fw-bold">{{ card.ordemProd }}</h4>
@@ -204,8 +204,8 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="row btn-group-vertical w-100 mx-0 gap-1">
-                                            <button class="btn disabled btn-outline-dark border-2 rounded-bottom-2">Tempo Total<br>123</button>
-                                            <button class="btn disabled btn-outline-dark border-2 rounded-top-2">Tempo Atual<br>123</button>
+                                            <button class="btn disabled btn-outline-dark border-2 rounded-bottom-2">Tempo Total<br>02:25:10</button>
+                                            <button class="btn disabled btn-outline-dark border-2 rounded-top-2">Tempo Atual<br>01:12:03</button>
                                         </div>
                                     </div>
                                 </div>
@@ -218,7 +218,7 @@
                 <div class="col-3 border border-white border-top-0" id="lixExt" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 43.23%, #07031B 85.42%); ">
                     <h4 class="text-white text-center pb-2 border-white border-bottom">Lixamento Externo</h4>
                     {% for card in cards %}
-                        {% if card.processoAtual == 'Lixamento Ext.' %}
+                        {% if card.indexAtual != -1 and card.processos[card.indexAtual] == 'Lixamento Ext.' %}
                         <div class="card">
                             <div class="card-body p-1">
                                 <h4 class="card-title text-center fw-bold">{{ card.ordemProd }}</h4>
@@ -233,8 +233,8 @@
                                     </div>
                                     <div class="col-6">
                                         <div class="row btn-group-vertical w-100 mx-0 gap-1">
-                                            <button class="btn disabled btn-outline-dark border-2 rounded-bottom-2">Tempo Total<br>123</button>
-                                            <button class="btn disabled btn-outline-dark border-2 rounded-top-2">Tempo Atual<br>123</button>
+                                            <button class="btn disabled btn-outline-dark border-2 rounded-bottom-2">Tempo Total<br>02:25:10</button>
+                                            <button class="btn disabled btn-outline-dark border-2 rounded-top-2">Tempo Atual<br>01:12:03</button>
                                         </div>
                                     </div>
                                 </div>
